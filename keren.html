@@ -11,6 +11,7 @@
       src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js "
       crossorigin="anonymous"
     >
+    
 </script>
 <body>
     <main id="main"></main>
@@ -22,18 +23,51 @@ function ReturnText(){
     return <h1>hello world</h1>  
 }
 function Hello() {
-    return <h2>hello</h2>
+    return <div>hello <MyName name="keren queen"/></div>
 }
-function MyName(){
-    return <h1>keren hailu </h1>
+function MyName(props){
+    return  <h1>{props.name} </h1>
+   
 }
+function Book(props){
+    // const book1={
+    //     name:"bob",
+    //     page:150,
+    // }
+    return  <h1>{props.book.name} , {props.book.page} </h1>
+}
+function Objects(){
+    const book3={
+        name:"keren",
+        page:222,
+    }
+    const book1={
+        name:"bob",
+        page:150,
+    }
+    const book2={
+        name:"marli",
+        page:200,
+    }
+    return <h1>
+      <Book book={book1}/>
+      <Book book={book2}/>
+      <Book book={book3}/>
+        </h1>
+    
+}
+// function Books(obj) {
+//     return <p> {obj.name} , {obj.page} </p>
+// }
 function Clalit() {
     return <div>
         <Hello/>
-        <MyName/>
         </div>
 }
-      ReactDOM.render(<Clalit/>, domElement
+      ReactDOM.render(<div>
+        <Objects/>
+        <Clalit/>
+        </div>, domElement
       );
     </script>
   </body>
