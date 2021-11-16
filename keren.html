@@ -18,23 +18,22 @@
     <script type="text/babel">
       const domElement = document.getElementById("main");
       
-
-      ReactDOM.render(
-        <div>
-          <h3>שלום שלום this is node.js</h3>
-          <h3>שלום שלום this is node.js</h3>
-          <h3>שלום שלום this is node.js</h3>
-          <h3>שלום שלום this is node.js</h3>
-          <h3>שלום שלום this is node.js</h3>
-          <h3>שלום שלום this is node.js</h3>
-          <h3>שלום שלום this is node.js</h3>
-          <h3>שלום שלום this is node.js</h3>
-          <h3>שלום שלום this is node.js</h3>
-          <h3>שלום שלום this is node.js</h3>
-          <h3>שלום שלום this is node.js</h3>
-          
-        </div>,
-        domElement
+function ReturnText(){
+    return <h1>hello world</h1>  
+}
+function Hello() {
+    return <h2>hello</h2>
+}
+function MyName(){
+    return <h1>keren hailu </h1>
+}
+function Clalit() {
+    return <div>
+        <Hello/>
+        <MyName/>
+        </div>
+}
+      ReactDOM.render(<Clalit/>, domElement
       );
     </script>
   </body>
