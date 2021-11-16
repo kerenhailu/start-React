@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script
+      src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js "
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        background-image: url(https://i.gifer.com/TQOu.gif);
+      }
+      h1,
+      h2 {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main id="main"></main>
+
+    <script type="text/babel">
+      const domElement = document.getElementById("main");
+      const myName = "keren";
+      const myAge = 22;
+      const car={
+          type:"honda",
+          price:20000,
+          year:2020,
+      }
+      const car1={
+          type:"4x4",
+          price:10000,
+          year:2000,
+      }
+
+      const car2={
+          type:"mazda",
+          price:60000,
+          year:2006,
+      }
+
+      ReactDOM.render(
+        <div>
+          <h1>Hi There</h1>
+          <h1>{myName}</h1>
+          <h1>{myAge} 22</h1>
+
+              <h2>car 1 :{car.type},{car.price},{car.year}</h2>
+              <h2>car 2 :{car1.type},{car1.price},{car1.year}</h2>
+              <h2>car 3 :{car2.type},{car2.price},{car2.year}</h2>
+   
+              <img
+            src="https://www.israelhayom.co.il/sites/default/files/styles/566x349/public/images/articles/2019/12/08/15757900645212_b.jpg"
+            alt="beyonce"
+          ></img>
+          <img
+            src="https://www.frogi.co.il/picserver/f/0714/10131/3.gif"
+            alt="beyonce"
+          ></img>
+        </div>,
+        domElement
+      );
+    </script>
+  </body>
+</html>
